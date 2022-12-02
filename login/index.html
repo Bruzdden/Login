@@ -1,0 +1,74 @@
+<html>  
+<head>  
+    <title>PHP login system</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>Login</h1>  
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+        <div class="container">
+            <p>
+                <label for="usern"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="usern" name="usern" required>
+            </p>
+            
+            
+            <p>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" name="psw" required>   
+            </p>
+            <p>
+                <label for="level"><b>level</b></label>
+                <input type="text" placeholder="Enter level" id="level" name="level" required>   
+            </p>
+            
+            <p>     
+                <input type ="submit" id = "btn" value = "Login" />  
+            </p>  
+            <label>
+                <input type="checkbox" id="btn" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+            
+            
+        <div class="users">
+                <ul>
+                  <li>
+                    <p>Please select your tier:</p>
+                        <label for="levela">Silver</label><br>
+                        <input type="radio" id="levela" name="level" value="silver">
+                      
+                        <label for="levela">Gold</label><br>
+                        <input type="radio" id="levela" name="level" value="gold">
+
+                        <label for="levela">Platinum</label>
+                        <input type="radio" id="levela" name="level" value="plat">
+                     
+                  </li>
+                </ul>
+        </div>
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  

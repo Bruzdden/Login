@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
+  }
+  input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+  .users {
+  margin-left: 590px;
+  }
+
+  .container {
+    width: 400px;
+    margin: auto;
+    padding-top: 200px;
+  }
+
+  body {
+    overflow: hidden;
+  }
+#frm{  
+    border: solid gray 1px;  
+    width:25%;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: white;  
+    padding: 50px;  
+}  
+#btn{  
+    color: #fff;  
+    background: #337ab7;  
+    padding: 7px;  
+    margin-left: 70%;  
+}  
