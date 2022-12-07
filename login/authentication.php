@@ -1,18 +1,21 @@
+
 <?php      
     include('connection.php');  
 
     $username = $_POST['usern'];  
-    $password = $_POST['psw'];  
+    $pass = $_POST['psw'];  
     $level = $_POST["level"];
 
         $username = stripcslashes($username);  
-        $password = stripcslashes($password);  
+        $pass = stripcslashes($pass);  
         $level = stripcslashes($level);
         $username = mysqli_real_escape_string($con, $username);  
-        $password = mysqli_real_escape_string($con, $password);  
+        $pass = mysqli_real_escape_string($con, $pass);  
+        $level = mysqli_real_escape_string($con, $level);  
+        $hash = hash("sha256", $pass);
       
-        $sql = "SELECT * from log WHERE name ='$username' AND pass ='$password' AND lev ='$level'";  
-        $result = mysqli_query($con, $sql);  
+        $sql = "SELECT * from login WHERE name ='$username' AND password='$hash' AND lev ='$level'";  
+        $result = mysqli_query($con, $sql); 
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  
           

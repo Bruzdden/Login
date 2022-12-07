@@ -13,16 +13,20 @@
                 <input type="text" placeholder="Enter Username" id="usern" name="usern" required>
             </p>
             
-            
             <p>
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="psw" name="psw" required>   
             </p>
-            <p>
-                <label for="level"><b>level</b></label>
-                <input type="text" placeholder="Enter level" id="level" name="level" required>   
-            </p>
             
+            <p>
+            <label for="level">Choose a Tier:</label>
+
+                <select id="level" name="level" required>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+                </select>
+            </p>
             <p>     
                 <input type ="submit" id = "btn" value = "Login" />  
             </p>  
@@ -32,22 +36,6 @@
         </div>
             
             
-        <div class="users">
-                <ul>
-                  <li>
-                    <p>Please select your tier:</p>
-                        <label for="levela">Silver</label><br>
-                        <input type="radio" id="levela" name="level" value="silver">
-                      
-                        <label for="levela">Gold</label><br>
-                        <input type="radio" id="levela" name="level" value="gold">
-
-                        <label for="levela">Platinum</label>
-                        <input type="radio" id="levela" name="level" value="plat">
-                     
-                  </li>
-                </ul>
-        </div>
     <script>  
             function validation()  
             {  
