@@ -14,7 +14,7 @@
         $level = mysqli_real_escape_string($con, $level);  
         $hash = hash("sha256", $pass);
       
-        $sql = "SELECT * from login WHERE name ='$username' AND password='$hash' AND lev ='$level'";  
+        $sql = "SELECT * from login WHERE name ='$username' AND password='$pass' AND lev ='$level'";  
         $result = mysqli_query($con, $sql); 
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  

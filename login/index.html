@@ -30,6 +30,9 @@
             <p>     
                 <input type ="submit" id = "btn" value = "Login" />  
             </p>  
+            <p>
+                <a href="./reg.html">Dont have acount yet?</a>
+            </p>
             <label>
                 <input type="checkbox" id="btn" checked="checked" name="remember"> Remember me
             </label>
@@ -39,8 +42,8 @@
     <script>  
             function validation()  
             {  
-                var id=document.f1.user.value;  
-                var ps=document.f1.pass.value;  
+                var id=document.f1.usern.value;  
+                var ps=document.f1.psw.value;  
                 if(id.length=="" && ps.length=="") {  
                     alert("User Name and Password fields are empty");  
                     return false;  
