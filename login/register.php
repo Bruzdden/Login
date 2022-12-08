@@ -22,13 +22,14 @@ if (isset($_POST['regBtn']))
             $result = mysqli_query($con, $sql);
             if (mysqli_num_rows($result) == 0)
             {
-                $code = ("INSERT INTO login VALUES ('{}','{$username}', '{$pass}', '{$level}')");
+                $hash = hash('sha256', $pass);
+                $code = ("INSERT INTO login ( name, password, lev) VALUES ('{$username}', '{$hash}', '{$level}')");
                 mysqli_query($con, $code);
             
                 $sql = ("SELECT * FROM login WHERE name='{$username}'");
                 $result = mysqli_query($con, $sql);
                 $count = mysqli_num_rows($result);
-                if ($count == 0){
+                if ($count == 1){
                     echo '<font color="green">Yay!! Your account has been created. <a href="./index.html">Click here</a> to login!<font>';
                     }
                 else{
